@@ -27,7 +27,7 @@ Data can be imported from many different sources. In this exercise, we import da
 The data is an [excerpt of the Gapminder data](https://www.gapminder.org/data/documentation/) on life expectancy, GDP per capita, and population by country. Compiled for the purpose of teaching with data until 2007.
 
 ```{r}
-
+gapminder
 ```
 
 # Data tidying
@@ -89,7 +89,8 @@ ggplot(data = gapminder_yr_2007,
 -   Use a function to display the summary table of median life expectancy by continent.
 
 ```{r}
-
+gapminder_yr_2007 |>
+  kable()
 ```
 
 # Data communication
