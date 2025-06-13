@@ -11,15 +11,15 @@ Learning reflections are part of your weekly homework and have a weight of 20% o
 
 # Lecture
 
-<!--# Add your reflections on the lecture of this week here -->
+I am looking forward to having live coding lectures. I think this will be a great way to address any questions or challenges that may come up in the moment. Thank you for your patience trouble shooting in such a large class.
 
 # Homework Assignment
 
-<!--# Add your reflections on the homework programming assignment here -->
+While doing the assignment, I have found that reading other people's code takes a while to understand, even when it is small chunks/one line and when it is commented/narrated well. I think this is really important for me to remember when collaborating on programming projects with my colleagues, looking back on my own work or even producing readable Quarto files for small statistical analysis/data visualization projects.
 
 # Readings
 
-<!--# Add your reflections on the required readings here -->
+The ability to add multiple arguments in `ggplot` is so powerful and makes it so easy to make beautiful, publication worthy firgures. I want to explore using all of these tools to present data well.
 
 # Submit learning reflections
 
