@@ -1,5 +1,5 @@
 ---
-title: "Week 02 - Homework Assignment"
+title: "Week 02 - Homework Assignment - Whitney Knopp"
 subtitle: "Data Science Lifecycle"
 format: html
 editor: visual
@@ -16,9 +16,7 @@ This homework assignment is designed as a guided walkthrough of the data science
 
 As you work through each task, carefully read the step-by-step instructions and identify the corresponding elements in the provided code. This format will help you understand how I will describe coding tasks in future exercises, so pay attention to how each step connects to specific parts of the code.
 
-Your main objectives are to:
-- Run each code chunk and ensure it executes without errors
-- Verify that each step produces the expected results  
+Your main objectives are to: - Run each code chunk and ensure it executes without errors - Verify that each step produces the expected results\
 - Understand the connection between the task descriptions and the code implementation
 
 # Task 0: Load R packages
@@ -49,7 +47,7 @@ library(here)
 **Note:** You will learn more about the use of the `here()` function when we look at data import in more detail.
 
 ```{r}
-global_waste_data <- read_csv(here("wk-02/data/country_level_data_0.csv"))
+global_waste_data <- read_csv(here("/cloud/project/data/country_level_data_0.csv"))
 ```
 
 # Task 2: Data tidying (and some transformation)
@@ -94,7 +92,7 @@ global_waste_data_small <- global_waste_data |>
 
 4.  Describe in your own words what the `mutate()` function does in this code-chunk
 
-<!--# Remove this comment and write your text here -->
+Following the first pipe, the line of code `mutate()` adds a new column of data called `capita_kg_year` that is calculated using math and other columns in the existing `global_waste_data_small`. The second pipe uses the `factor()` function within the `mutate()` function to change the class of the `income_id` column from a character to a factor with 4 possible levels: "HIC", "UMC", "LMC", and "LIC".
 
 ```{r}
 global_waste_data_kg_year <- global_waste_data_small |> 
@@ -122,15 +120,15 @@ global_waste_data_kg_year <- global_waste_data_small |>
 
 4.  Look at the plot that you created and describe what the `mutate()` function achieved in the previous task
 
-<!--# Remove this comment and write your text here -->
+The `mutate()` function in the previous task was able to create/edit a column of the data frame, the MSW per capita generated annually (kg/yr). It also established 4 levels of factors in the `income_id` column that categorize by income level to plot as box plots.
 
 5.  Describe in your own words what the 'color' argument inside the `aes()` does
 
-<!--# Remove this comment and write your text here -->
+The color argument in the `aes()` function colors the box plots by `income_id` factor levels. Since there are 4 distinct and discrete levels in `income_id` they are all assigned a color on the box plot.
 
 6.  Describe in your own words what the `labs()` function does
 
-<!--# Remove this comment and write your text here -->
+The `labs()` function puts labels on the x and y axes of the plot. You are able to specify text on the x axis with `x = ""` and on the y axis with `y = ""`. On the y axis, its different than labeling each of the 4 levels of `income_id`, which is achieved with the `y = income_id` in `aes()`.
 
 ```{r}
 ggplot(data = global_waste_data_kg_year,
